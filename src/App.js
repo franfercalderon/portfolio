@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { AppProvider } from './context/AppContext';
+import NavBar from './components/NavBar/NavBar';
+import Hero from './views/Hero';
+import Skills from './views/Skills';
+import Projects from './views/Projects';
+import BackToTop from './components/BackToTop/BackToTop';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AppProvider>
+      <div className='App'> 
+          <NavBar />
+          <Hero />
+          <Skills />  
+          <Projects /> 
+          <BackToTop/>
+      </div>
+    </AppProvider>
+
+  )
 }
 
 export default App;

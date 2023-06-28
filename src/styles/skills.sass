@@ -1,0 +1,121 @@
+.skills-main-container
+    width: 100vw
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+
+.skills-circle
+    background-color: $lightgreen
+    border-radius: 50%
+    z-index: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 500px
+    width: 220px
+    overflow: hidden
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.7)
+    @media screen and (min-width: 993px) 
+        height: 350px
+        width: 450px
+        flex-direction: row
+
+.skills-title
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    overflow: visible
+    font-family: $oxygen
+    color: $beige
+    width: 100%
+    @media screen and (min-width: 993px) 
+        margin: 2% 0
+        width: 25%
+
+.skills-title :nth-child(1)
+    margin-top: 0
+
+.skills-title p 
+    font-weight: 400
+    min-width: 35vw
+    font-size: 3rem
+    margin-top: -1.8rem
+    text-align: center
+    @media screen and (min-width: 769px) 
+        font-size: 3.2rem
+        margin-top: -2rem
+    @media screen and (min-width: 993px) 
+        font-size: 4.4rem
+        margin-top: -2.6rem
+
+.skill-logo-container
+    color: white
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-evenly 
+    padding: 0
+    width: 100%
+    margin: 10% 0
+    @media screen and (min-width: 993px) 
+        width: 35%
+        margin: 0 1vw
+
+.tech-logo-div-wrap
+    margin: 0 4vw
+    width: 10%
+    display: flex
+    position: relative
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    z-index: 4
+    @media screen and (min-width: 993px) 
+        height: 100%
+        width: 20%
+        margin: 0
+
+.tech-logo-div
+    display: none
+    @media screen and (min-width: 993px) 
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        height: 75%
+        width: 115% 
+        border: 3px solid $corn
+        box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.6)
+        position: absolute
+        border-radius: 500px
+        padding: 40px 0
+
+.tech-logo-div p
+    width: 90%
+    font-size: 0.9rem
+    font-weight: 800
+    font-family: $code
+    color: $white
+    text-align: center
+
+.skill-logo-container img
+    width: 75%
+    position: absolute
+
+.skill-progress-bar
+    height: 0.8rem
+    width: 80%
+    border: 1px solid $beige
+    display: flex
+    padding: 1px
+    border-radius: 100px
+
+
+.skill-progress-bar span
+    border-radius: 100px
+    background-color: $beige 
+    // height: 100%
+    

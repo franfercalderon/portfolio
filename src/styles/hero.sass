@@ -1,0 +1,90 @@
+.hero-main-container
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+    // margin-top: -30px
+    // background-color: $darkgreen
+    display: flex
+    align-items: center
+    justify-content: center
+    // scroll-snap-align: start
+    // position: absolute
+
+.hero-title-container
+    display: flex
+    justify-content: center
+    align-items: start
+    font-family: $oxygen
+    font-weight: 700
+    font-size: 3.1rem
+    margin-top: -30px
+    @media screen and (min-width: 769px) 
+        font-size: 5rem
+    @media screen and (min-width: 993px) 
+        font-size: 9rem
+
+.title-column
+    padding: 0.3rem
+    @media screen and (min-width: 769px) 
+        padding: 0.6rem
+    @media screen and (min-width: 993px) 
+        padding: 0.9rem
+
+.title-line 
+    display: flex
+    align-items: baseline
+    height: calc( 100% /3 )
+    letter-spacing: -0.1rem
+    margin-top: -2rem
+    @media screen and (min-width: 769px) 
+        margin-top: -3.3rem
+    @media screen and (min-width: 993px) 
+        margin-top: -6.2rem
+
+// .title-line:nth-child(1)
+    // margin-top: -2rem
+
+.title-column.left
+    color: $beige
+
+.title-column.right
+    color: $corn
+
+.left .title-line
+    justify-content: flex-end
+
+.title-line span 
+    display: flex
+    border-radius: 50%
+    background-color: $brick
+    height: 1.2rem
+    width: 1.2rem 
+    margin-left: -0.1rem
+    @media screen and (min-width: 769px) 
+        height: 1.5rem
+        width: 1.5rem 
+        margin-left: -0.3rem
+    @media screen and (min-width: 993px) 
+        height: 2.6rem
+        width: 2.6rem 
+        margin-left: -0.5rem
+
+.title-line-small
+    font-size: 0.65rem
+    margin-left: 0.2rem
+    margin-bottom: 0.8rem
+    font-weight: 400
+    @media screen and (min-width: 769px) 
+        font-size: 0.9rem
+        margin-left: 0.3rem
+        margin-bottom: 1.5rem
+    @media screen and (min-width: 993px) 
+        font-size: 1.5rem
+        margin-left: 0.55rem
+        margin-bottom: 2.7rem
+
+.dot
+    height: 20vw
+    width: 20vw
+    background-color: red
+    position: fixed
