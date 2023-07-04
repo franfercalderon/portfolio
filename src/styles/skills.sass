@@ -4,22 +4,28 @@
     display: flex
     align-items: center
     justify-content: center
+    // overflow: visible
 
 .skills-circle
-    background-color: $lightgreen
     border-radius: 50%
+    background-color: $lightgreen
     z-index: 0
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    height: 500px
-    width: 220px
+    height: 90vw
+    width: 90vw
     overflow: hidden
     box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.7)
+    @media screen and (min-width: 769px) 
+        height: 330px
+        width: 330px
+        flex-direction: row
+
     @media screen and (min-width: 993px) 
         height: 350px
-        width: 450px
+        width: 350px
         flex-direction: row
 
 .skills-title
@@ -31,7 +37,7 @@
     font-family: $oxygen
     color: $beige
     width: 100%
-    @media screen and (min-width: 993px) 
+    @media screen and (min-width: 769px) 
         margin: 2% 0
         width: 25%
 
@@ -45,11 +51,17 @@
     margin-top: -1.8rem
     text-align: center
     @media screen and (min-width: 769px) 
-        font-size: 3.2rem
-        margin-top: -2rem
+        font-size: 4rem
+        margin-top: -2.6rem
     @media screen and (min-width: 993px) 
         font-size: 4.4rem
         margin-top: -2.6rem
+    // @media screen and (min-width: 769px) 
+    //     font-size: 3.2rem
+    //     margin-top: -2rem
+    // @media screen and (min-width: 993px) 
+    //     font-size: 4.4rem
+    //     margin-top: -2.6rem
 
 .skill-logo-container
     color: white
@@ -60,7 +72,7 @@
     padding: 0
     width: 100%
     margin: 10% 0
-    @media screen and (min-width: 993px) 
+    @media screen and (min-width: 769px) 
         width: 35%
         margin: 0 1vw
 
@@ -73,14 +85,14 @@
     align-items: center
     justify-content: center
     z-index: 4
-    @media screen and (min-width: 993px) 
+    @media screen and (min-width: 769px) 
         height: 100%
         width: 20%
         margin: 0
 
 .tech-logo-div
     display: none
-    @media screen and (min-width: 993px) 
+    @media screen and (min-width: 769px) 
         display: flex
         flex-direction: column
         align-items: center
@@ -117,5 +129,4 @@
 .skill-progress-bar span
     border-radius: 100px
     background-color: $beige 
-    // height: 100%
     

@@ -1,19 +1,12 @@
 import {motion} from 'framer-motion'
 import { useContext } from 'react'
 import { AppContext } from '../../context/AppContext'
-
+import {Link} from 'react-scroll'
 
 export default function NavBar(){
 
     //CONTEXT
-    const {sections, setActiveSection} = useContext(AppContext)
-
-    const handleScroll = (section) =>{
-        //scroll into rceived section ref (target)
-        section.ref.current.scrollIntoView({behavior: 'auto'})
-
-        setActiveSection(section.name)
-      }
+    const {sections} = useContext(AppContext)
     
     //ANIMATIONS
     const liItem = {
@@ -31,12 +24,22 @@ export default function NavBar(){
         <div className="navbar-main-container">
             <ul>
                 {sections && sections.map((section, idx)=>{
-                    //When gets sections from context, maps sections array for nav options:
-                    return(
+                       
+                //When gets sections from context, maps sections array to Navbar:
+                return(
+                    <Link to={section}
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
+                    ignoreCancelEvents={true}
+
+                    // isDynamic={true}
+                    activeClass='active'
+                    key={idx}
+                    >
                         <motion.li
-                            className={`nav-li ${section.active && 'active'}`}
-                            key={section.name}
-                            onClick={()=>handleScroll(section)}
+                            className={`nav-li`}
                             variants={liItem}
                             initial={'hidden'}
                             animate={'visible'}
@@ -46,12 +49,13 @@ export default function NavBar(){
                                 times: [0, 0.8, 1],
                                 ease: 'easeInOut'
                             }}
-                        >{section.name.toUpperCase()}</motion.li>
-                    )
-                    
+                        >
+                            {section.toUpperCase()}
+                        </motion.li>
+                    </Link>
+                )
                 })
                 }
-
             </ul>
         </div>
     )

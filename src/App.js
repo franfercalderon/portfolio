@@ -15,6 +15,7 @@ function App() {
           <Skills />  
           <Projects /> 
           <BackToTop/>
+          
       </div>
     </AppProvider>
 

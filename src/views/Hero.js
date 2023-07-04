@@ -1,41 +1,34 @@
 // import { useEffect } from "react";
 // import {motion, useTransform, useScroll} from 'framer-motion'
 import Title from "../components/Title/Title";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { AppContext } from "../context/AppContext";
 import { useInView } from "framer-motion";
 
 
 export default function Hero(){
 
-    const { heroRef , setActiveSection} = useContext(AppContext)
-
+    //REF
+    const heroRef = useRef(null) 
+    //CREATES VARIABLE FOR SECTION ANIMATION PURPOSES
     const isInView = useInView(heroRef, {amount: 0.9})
+
+    //FUNCTION TO UPDATE IF HERO IS IN VIEW
+    const {setShowGoToTop} = useContext(AppContext)
 
     useEffect(()=>{
         if(isInView){
             //If this section is in view, it will set as active section in context. This will be used to style NavBar
-            setActiveSection('hero')
+            setShowGoToTop(false)
         }
-    },[isInView, setActiveSection])
+        else{
+            setShowGoToTop(true)
+        }
+    },[isInView, setShowGoToTop])
 
-    //
-
-    // const ref = useRef(null)
-
-    // const {scrollYProgress} = useScroll({
-    //     target: ref,
-    //     offset: ['end end', 'start end']
-    //     // container: heroRef,
-    // })
-
-    // const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
 
     return(
-        <section className="hero-main-container" ref={heroRef}>
-            {/* <motion.div className='dot'ref={ref} style={{opacity}}>
-
-            </motion.div> */}
+        <section className="hero-main-container" ref={heroRef} id='hero'>
             <Title/>
         </section>
     )
