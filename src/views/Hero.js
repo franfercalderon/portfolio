@@ -1,5 +1,3 @@
-// import { useEffect } from "react";
-// import {motion, useTransform, useScroll} from 'framer-motion'
 import Title from "../components/Title/Title";
 import { useContext, useEffect, useRef } from "react";
 import { AppContext } from "../context/AppContext";
@@ -10,6 +8,7 @@ export default function Hero(){
 
     //REF
     const heroRef = useRef(null) 
+    
     //CREATES VARIABLE FOR SECTION ANIMATION PURPOSES
     const isInView = useInView(heroRef, {amount: 0.9})
 

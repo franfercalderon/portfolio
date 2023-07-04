@@ -22,9 +22,6 @@ export default function Title(){
                 delay: 1,
             }
         },
-        hover:{
-            scale: 2
-        }
     }
 
     const title = {
@@ -39,11 +36,6 @@ export default function Title(){
                 ease: 'easeInOut'
             }
         },
-        vanish: {
-            opacity: 0,
-            scale: 0.2,
-            y: '-50%'
-        }
     }
 
     //Gets Y axis scroll progress from framer-motion hook and transforms it into opacity, scale and y values to style element:

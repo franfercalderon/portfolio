@@ -10,28 +10,23 @@ export default function BackToTop(){
     //CONTEXT
     const {showGoToTop } = useContext(AppContext)
 
-    //FUNCTIONS
-    // const goToTop = ()=>{
-    //     //Whenever is called, scrolls to hero section (main one)
-    //     // heroRef.current.scrollIntoView()
-    //     // setActiveSection('hero')
-
-    // }
-
     //ANIMATIONS
     const buttonControls = useAnimation()
 
     const backToTopBtn = {
         hidden: {
-            // opacity: 0,
-            y: 60
+            opacity: 0,
+            y: 0
         },
         visible: {
             opacity: 0.6,
-            y: 5
+            y: -60
         },
         hover:{
             opacity: 1
+        },
+        click:{
+            scale: 0.9
         }
     }
 
@@ -54,17 +49,14 @@ export default function BackToTop(){
         smooth={true}
         offset={-100}
         duration={500}
-        activeClass='active'
-        ignoreCancelEvents={true}
-
         >
             <motion.div 
                 className="back-to-top-container" 
-                // onClick={goToTop}
                 variants={backToTopBtn}
-                initial='hidden'
+                initial={showGoToTop ? 'visible' : 'hidden'}
                 animate={buttonControls}
-                whileHover='hover'
+                whileHover={'hover'}
+                whileTap={'click'}
                 >
                 <FontAwesomeIcon icon={faChevronUp}/>
             </motion.div>

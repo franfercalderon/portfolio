@@ -4,6 +4,7 @@ import Hero from './views/Hero';
 import Skills from './views/Skills';
 import Projects from './views/Projects';
 import BackToTop from './components/BackToTop/BackToTop';
+import PortflioBtn from './components/PortfolioBtn/PortfolioBtn';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
           <Skills />  
           <Projects /> 
           <BackToTop/>
-          
+          <PortflioBtn/>
       </div>
     </AppProvider>
 

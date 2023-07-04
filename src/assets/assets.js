@@ -1,5 +1,4 @@
 //Resources to be imported in different parts of the site
-
 const skillsArrayLeft = [
     {
         img: 'html',

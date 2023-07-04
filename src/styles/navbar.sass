@@ -1,22 +1,55 @@
 .navbar-main-container
     position: fixed
-    top: 25px
-    right: 40px
-    height: 80px
+
+.mobile.navbar-main-container
+    top: 0
+    justify-self: center
+    height: auto
+    width: 100%
     z-index: 8
+    display: flex
+    flex-direction: column
+    align-items: center
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.7)
+    backdrop-filter: blur(10px)
+    @media screen and (min-width: 769px)
+        display: none !important
+
+.desktop.navbar-main-container
+    display: none
+    @media screen and (min-width: 769px)
+        position: fixed
+        top: 30px
+        right: 40px
+        height: 80px
+        display: flex
+        justify-self: center
+        z-index: 8
+        flex-direction: column
+        align-items: center
 
 .navbar-main-container ul
     display: flex
+    align-items: center
     list-style: none
     font-family: $code
     font-size: 1.2rem
     color: $beige
-    cursor: pointer
+    padding: 0
+
+.mobile.navbar-main-container ul
+    flex-direction: column
+    margin: 30px 0 10px
 
 .nav-li
-    margin-left: 40px
+    cursor: pointer
+    margin-bottom: 10px
+    position: relative
+    @media screen and (min-width: 769px)
+        margin-left: 40px
+        margin-bottom: 0
 
-.active .nav-li::after
+.desktop .active .nav-li::after
     content: ''
     position: absolute
     bottom: -5px
@@ -26,4 +59,17 @@
     border-left: 9px solid $lightgreen
     height: 85%
     width: 110%
+
+.mobile .active .nav-li::after
+    content: ''
+    position: absolute
+    width: 100%
+    bottom: 0
+    left: 0
+    border-bottom: 3px solid $corn
+
+//     content: ''
+//     position: absolute
+//     bottom: -2px
+//     width: 100%
 
