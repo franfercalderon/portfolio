@@ -2,6 +2,7 @@ import {useInView} from 'framer-motion'
 import { useRef, useContext, useEffect} from "react";
 import ProjectsContainer from '../components/ProjectsContainer/ProjectsContainer';
 import { AppContext } from '../context/AppContext';
+
 export default function Projects (){
 
     //CONTEXT
@@ -25,7 +26,7 @@ export default function Projects (){
 
     return(
         <section className="projects-main-container"  id="projects" ref={projectsRef}>
-            <ProjectsContainer isInView={isInView}/>
+            <ProjectsContainer />
         </section>
     )
 }

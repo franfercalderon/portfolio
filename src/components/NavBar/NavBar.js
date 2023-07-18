@@ -39,8 +39,6 @@ export default function NavBar(){
         }
     }
 
-
-
     const navBar = {
         initial:{
             opacity: 0,

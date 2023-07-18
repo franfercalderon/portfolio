@@ -1,0 +1,133 @@
+//SHARED STYLES
+.about-main-container
+    width: 100vw
+    height: 100vh
+
+.about-container
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 30px 0
+    font-family: $oxygen
+
+.about-text-container
+    position: absolute
+    background-color: $lightgreen
+    color: $white
+    z-index: 1
+    text-align: center
+    font-size: 0.9rem
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 10px
+    width: 100%
+    height: 270px
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.7)
+    overflow: scroll
+
+.about-inner-text
+    height: 100%
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.about-frame-container
+    display: flex
+    position: absolute
+    z-index: 0
+    border: 5px solid $beige
+    text-align: center
+    flex-direction: column
+    justify-content: space-between
+    height: 420px
+    width: 180px
+
+.about-title
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $corn
+    width: 100%
+    height: 75px
+
+.about-title h3 
+    font-size: 1.6rem
+    font-weight: 800
+
+.about-emoji-container
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 75px
+
+.emoji-desktop
+    display: none
+
+.about-emoji
+    position: absolute
+    font-size: 2rem
+
+.about-title-desktop
+    display: none
+
+.about-text-container span
+    color: $corn
+    font-weight: 600
+
+@media screen and (min-width: 451px)
+
+    .about-text-container
+        padding: 20px
+        font-size: 1rem
+
+@media screen and (min-width: 769px)
+    .about-text-container
+        font-size: 1.2rem
+        height: 40%
+        justify-content: space-evenly
+
+    .about-frame-container
+        display: none
+
+    .about-inner-text
+        height: 80%
+        width: 40%
+        text-align: left
+        overflow: scroll
+
+    .emoji-desktop
+        display: inline
+        position: relative
+        overflow: hidden
+        height: 80%
+        width: auto
+        aspect-ratio: 1
+        background-color: $darkgreen
+        border-radius: 50% 
+        display: flex
+        justify-content: center
+        align-items: center
+        box-shadow: 0 0 29px -7px rgba(0,0,0,0.55) inset
+
+    .about-emoji
+        position: absolute
+        font-size: 4rem
+
+    .about-title-desktop
+        display: flex
+        flex-direction: column
+        height: 100%
+        justify-content: center
+        align-items: flex-end
+
+    .about-title-desktop h3 
+        color: $corn
+        font-size: 4.4rem
+        line-height: 4.2rem
+        font-weight: 600
+
